@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+
+actor User
+actor Admin
+
+rectangle "Sistem Evidență Angajați" {
+  usecase "Autentificare" as UC1
+  usecase "Vizualizare angajați" as UC2
+  usecase "Căutare angajat" as UC3
+  usecase "Vizualizare statistici" as UC4
+  usecase "Login" as UC5
+
+  usecase "Adăugare angajat" as UC6
+  usecase "Modificare angajat" as UC7
+  usecase "Ștergere angajat" as UC8
+}
+
+' User
+UC1-->User
+UC2-->User
+UC3-->User
+UC4-->User
+UC5-->User
+
+' Admin (are tot ce are User + CRUD)
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+@enduml
