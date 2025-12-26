@@ -1,0 +1,25 @@
+start
+
+:Deschidere aplicație;
+
+:Introducere username și parolă;
+
+if (Date corecte?) then (Da)
+  :Autentificare reușită;
+  :Vizualizare;
+
+  if (Rol utilizator?) then (Admin)
+    :Adăugare / Modificare / Ștergere angajat;
+  else (User)
+    :Vizualizare angajați;
+    :Căutare angajat;
+  endif
+
+  :Vizualizare statistici;
+  :Login;
+else (Nu)
+  :Mesaj eroare autentificare;
+endif
+
+stop
+@enduml
